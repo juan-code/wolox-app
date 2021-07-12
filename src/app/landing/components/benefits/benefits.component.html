@@ -1,0 +1,12 @@
+<div class="container-benefits">
+  <br />
+  <p class="text--center text--sentence-case font-size-medium">{{ 'BENEFITS.OUR_BENEFITS' | translate }} <span class="text--blue-sky">;)</span></p>
+  <div class="list-benefits">
+    <div class="list-benefits--item text--center" *ngFor="let benefit of listIconsNamesComponents">
+      <div class="icon-box">
+        <app-dynamic [type]="benefit.nameComponent"></app-dynamic>
+      </div>
+      <p class="text--capitalize">{{ getPath(benefit.text) | translate }}</p>
+    </div>
+  </div>
+</div>

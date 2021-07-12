@@ -1,0 +1,26 @@
+<nav class="navbar px-gutter" [class.bg-white]="isDown">
+  <div class="cursor-pointer">
+    <div (click)="goTo('start')">
+      <app-wolox-logo></app-wolox-logo>
+    </div>
+    <button type="button" class="btn-menu font-size-medium" (click)="toggleMenu()">
+      &#9776;
+    </button>
+  </div>
+  <ul class="navbar-menu" [class.is-open]="isOpen">
+    <li class="item" (click)="goTo('start')">
+      {{ 'MENU.HOME' | translate }}
+    </li>
+    <li class="item" (click)="goTo('benefits')">
+      {{ 'MENU.BENEFITS' | translate }}
+    </li>
+    <li class="item">
+      <app-select-language></app-select-language>
+    </li>
+    <li>
+      <button type="button" class="btn btn-outline--blue-sky text--blue-sky text--sentence-case">
+        {{ 'MENU.SING_IN' | translate }}
+      </button>
+    </li>
+  </ul>
+</nav>

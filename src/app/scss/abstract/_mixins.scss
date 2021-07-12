@@ -1,0 +1,12 @@
+@import './variables';
+//media queries
+//these sizes also are in constants ts like mediaqueries
+@mixin for-phone {
+  @media (max-width: $phoneSize) { @content; }
+}
+@mixin for-tablet {
+  @media (min-width: $tabletSize) { @content; }
+}
+@mixin for-desktop {
+  @media (min-width: $desktopSize) { @content; }
+}

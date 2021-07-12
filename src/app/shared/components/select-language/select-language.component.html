@@ -1,0 +1,7 @@
+<div class="select">
+  <select #langSelect (change)="i18nService.useLang(langSelect.value)">
+    <option [value]="lang" *ngFor="let lang of i18nService.listLanguages(); trackBy:trackLanguageName" [selected]="lang === i18nService.defaultLang()">
+      {{ nameLanguages[lang] }}
+    </option>
+  </select>
+</div>

@@ -1,0 +1,9 @@
+@import "../scss/main";
+
+.section-woloxer {
+  display: block;
+  @include for-desktop {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+  }
+}

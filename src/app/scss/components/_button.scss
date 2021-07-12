@@ -1,0 +1,23 @@
+@import "../abstract/variables";
+
+.btn {
+  outline: none;
+  cursor: pointer;
+  border-radius: 60px;
+  padding: 0.4rem 1rem;
+  background: white;
+  border: 2px solid transparent;
+  min-width: 6rem;
+  &.btn-outline--blue-sky {
+    border-color: $blueSky;
+    background-color: transparent;
+  }
+  &.btn-full--blue-sky {
+    background-color: $blueSky;
+    border-color: $blueSky;
+    color: white;
+  }
+  &.btn--shadowed {
+    box-shadow: 0px 0px 7px #00000087;
+  }
+}

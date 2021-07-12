@@ -1,0 +1,23 @@
+@font-face {
+	font-family: "FiraSans";
+	src: url("/assets/fonts/Fira_Sans/FiraSans-Regular.ttf") format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+ul, ol {
+  list-style: none;
+}

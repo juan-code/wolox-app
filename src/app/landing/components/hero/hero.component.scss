@@ -1,0 +1,30 @@
+@import "../../../scss/main";
+
+.container-hero {
+  display: block;
+  background-color: white;
+  padding-top: $heightNavbar;
+  padding-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  .container-hero_child {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  @include for-tablet {
+    display: flex;
+    .container-hero_child {
+      width: 50%;
+    }
+  }
+}
+.bg-header {
+  position: absolute;
+}
+:host ::ng-deep .img-picture {
+  width: 100%;
+  transform: rotatey(180deg);
+  max-width: 70%;
+}

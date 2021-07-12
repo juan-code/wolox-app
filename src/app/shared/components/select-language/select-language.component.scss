@@ -1,0 +1,45 @@
+@import "../../../scss/abstract/variables";
+
+.select {
+  position: relative;
+  display: flex;
+  width: max-content;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: .25em;
+  min-width: 5rem;
+  cursor: pointer;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  padding: 0.4rem 1rem 0.4rem 0.8rem;
+  border: 0;
+  background:$darkBlue;
+  background-image: none;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+.select::after {
+  cursor: pointer;
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  color: $greenHope;
+  font-size: $fontSmall;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+  opacity: 0.3;
+  transform: translateY(-45%);
+}
+.select:hover::after {
+  opacity: 1;
+}

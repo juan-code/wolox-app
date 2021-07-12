@@ -1,0 +1,23 @@
+{
+  "HERO": {
+    "WELCOME": "welcome to your",
+    "INTERVIEW": "technic interview",
+    "IN": "in"
+  },
+  "BENEFITS": {
+    "FLEXIBLE_SCHEDULE": "flexible working hours",
+    "HOME_OFFICE": "home office",
+    "CAPACITIES_WORKSHOPS": "trainings and workshops",
+    "SNACKS": "free snacks, fruits and drinks",
+    "REMOTE_WEEK": "remote week",
+    "CURRENTLY": "working on the latest technologies",
+    "OUR_BENEFITS": "Among the benefits we offer are"
+  },
+  "WOLOXERS": {
+    "FOLLOW_US": "follow us",
+    "WORK_TO": "work to",
+    "CONVERT": "convert",
+    "IDEAS": "ideas",
+    "PRODUCTS": "products"
+  }
+}

@@ -1,0 +1,57 @@
+@import "../abstract/variables";
+
+.px-gutter {
+  padding: 0 5%;
+}
+
+//text sentences
+.text--uppercase {
+  text-transform: uppercase;
+}
+.text--capitalize {
+  text-transform: capitalize;
+}
+.text--sentence-case::first-letter {
+  text-transform: uppercase;
+}
+//text alings
+.text--center {
+  text-align: center;
+}
+.text--left {
+  text-align: left;
+}
+.text--right {
+  text-align: right;
+}
+//text colors
+.text--white {
+  color: white;
+}
+.text--blue-sky {
+  color: $blueSky;
+}
+.text--green-hope {
+  color: $greenHope;
+}
+
+//fonts
+.font-size-big {
+  font-size: $fontBig;
+}
+.font-size-medium {
+  font-size: $fontMedium;
+}
+.font-size-normal {
+  font-size: $fontNormal;
+}
+.font-size-small {
+  font-size: $fontSmall;
+}
+.font--bold {
+  font-weight: bold;
+}
+//cursors
+.cursor-pointer {
+  cursor: pointer;
+}

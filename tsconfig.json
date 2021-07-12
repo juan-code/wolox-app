@@ -3,7 +3,13 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@env/*": ["src/environments/*"],
+      "@shared/*": ["src/app/shared/*", "src/app/shared/index"],
+      "@landing/*": ["src/app/landing/*"]
+    },
+    "outDir": "./dist/wolox",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
