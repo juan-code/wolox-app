@@ -1,0 +1,84 @@
+<form [formGroup]="formSignup" (ngSubmit)="onSubmit(formSignup)">
+  <div class="form-signup">
+    <div class="form-group">
+      <div class="group">
+        <div class="container-input" [class.error]="showError('name')">
+          <label>
+            {{ 'LABELS.NAME' | translate | capitalize }}
+          </label>
+          <input type="text" class="input input--block" [placeholder]="'PLACEHOLDER.EXAMPLE' | translate:getValue('john') | capitalize" formControlName="name" />
+          <small *ngIf="showError('name')" class="text--sentence-case">{{ getMessage('name') | translate:{value:maxLengthName} | capitalize }}</small>
+        </div>
+        <div class="container-input" [class.error]="showError('last_name')">
+          <label>
+            {{ 'LABELS.LAST_NAME' | translate | capitalize }}
+          </label>
+          <input type="text" class="input input--block" [placeholder]="'PLACEHOLDER.EXAMPLE' | translate:getValue('doe') | capitalize" formControlName="last_name" />
+          <small *ngIf="showError('last_name')" class="text--sentence-case">{{ getMessage('last_name') | translate | capitalize }}</small>
+        </div>
+        <div class="all-columns container-input" [class.error]="showError('phone')">
+          <label>
+            {{ 'LABELS.PHONE' | translate | capitalize }}
+          </label>
+          <input type="text" class="input input--block" [placeholder]="'PLACEHOLDER.EXAMPLE' | translate:getValue('300 301 2545') | capitalize" formControlName="phone" />
+          <small *ngIf="showError('phone')" class="text--sentence-case">{{ getMessage('phone') | translate:{value:maxLengthPhone} | capitalize }}</small>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <h2 class="text--sentence-case">{{ 'SIGN.LOCATION' | translate }}</h2>
+      <div class="group">
+        <div class="container-input" [class.error]="showError('country')">
+          <label>
+            {{ 'LABELS.COUNTRY' | translate | capitalize }}
+          </label>
+          <app-list-countries 
+            (changeCountry)="changeCountry($event)"
+            formControlName="country">
+          </app-list-countries>
+          <small *ngIf="showError('country')" class="text--sentence-case">{{ getMessage('country') | translate | capitalize }}</small>
+        </div>
+        <div class="container-input">
+          <label>
+            {{ 'LABELS.PROVIDENCE' | translate | capitalize }} ({{ 'LABELS.AUTOCOMPLETED' | translate | capitalize }})
+          </label>
+          <input type="text" [value]="province" class="input input--block" [placeholder]="'PLACEHOLDER.EXAMPLE' | translate:getValue('bogota') | capitalize" formControlName="province" readonly />
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <h2 class="text--sentence-case">{{ 'SIGN.ACCESS_INFORMATION' | translate }}</h2>
+      <div class="group">
+        <div class="all-columns container-input" [class.error]="showError('email')">
+          <label>
+            {{ 'LABELS.EMAIL' | translate | capitalize }}
+          </label>
+          <input type="text" class="input input--block" [placeholder]="'PLACEHOLDER.EXAMPLE' | translate:getValue('jhon@doe.com') | capitalize" formControlName="email" />
+          <small *ngIf="showError('email')" class="text--sentence-case">{{ getMessage('email') | translate | capitalize }}</small>
+        </div>
+        <div class="container-input" [class.error]="showError('password')">
+          <label>
+            {{ 'LABELS.PASSWORD' | translate | capitalize }}
+          </label>
+          <input type="password" class="input input--block" [placeholder]="'PLACEHOLDER.EXAMPLE' | translate:getValue('aSzRfrEeyC') | capitalize" formControlName="password" />
+          <small *ngIf="showError('password')" class="text--sentence-case">{{ getMessage('password') | translate | capitalize }}</small>
+        </div>
+        <div class="container-input" [class.error]="showError('confirmation')">
+          <label>
+            {{ 'LABELS.CONFIRMATION' | translate | capitalize }}
+          </label>
+          <input type="password" class="input input--block" [placeholder]="'PLACEHOLDER.EXAMPLE' | translate:getValue('aSzRfrEeyC') | capitalize" formControlName="confirmation" />
+          <small *ngIf="showError('confirmation')" class="text--sentence-case">{{ getMessage('confirmation') | translate | capitalize }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn--block" [disabled]="formSignup.invalid || isLogginIn">
+    <ng-container *ngIf="isLogginIn; else noLoading">
+      {{ 'LOADING' | translate | capitalize }}
+    </ng-container>
+    <ng-template #noLoading>
+      {{ 'SING_UP.LOGIN' | translate | capitalize }}
+    </ng-template>
+  </button>
+</form>

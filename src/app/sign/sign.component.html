@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="container-form">
+    <div class="container-form_head text--center">
+      <app-wolox-logo></app-wolox-logo>
+      <svg id="svg" class="wavy" xmlns="http://www.w3.org/2000/svg" viewBox="-300 0 950 270" >
+        <path d="M-314,267 C105,364 400,100 812,279" fill="none" stroke="white" stroke-width="120" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="container-form_body">
+      <div class="head">    
+        <button type="button" (click)="toggleLogin()" class="btn text--sentence-case" 
+        [class.btn-outline--white]="!isShowingLogin">
+          {{ 'SIGN.LOGIN' | translate }}
+        </button>
+        <button type="button" (click)="toggleLogin()" class="btn text--sentence-case" 
+          [class.btn-outline--white]="isShowingLogin">
+          {{ 'SIGN.REGISTRATION' | translate }}
+        </button>
+        <app-select-language></app-select-language>
+      </div>
+      <ng-container *ngIf="isShowingLogin; else signup">
+        <app-sign-in></app-sign-in>
+      </ng-container>
+      <ng-template #signup>
+        <app-sign-up></app-sign-up>
+      </ng-template>
+      <a class="back text--center text--sentence-case" routerLink="/">regresar a inicio</a>
+    </div>
+  </div>
+</div>

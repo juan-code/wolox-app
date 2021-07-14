@@ -1,0 +1,66 @@
+@import "../scss/abstract/variables";
+@import "../scss/abstract/mixins";
+
+.container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  height: auto;
+  background-color: rgba($blueSky, $opacity);
+  @include for-tablet {
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .head {
+    padding: 1rem 0;
+    padding-top: 0;
+    text-align: right;
+    & > * {
+      margin-left: 0.6rem;
+    }
+  }
+  .container-form {
+    width: 100%;
+    max-width: 550px;
+    background-color: $blueSky;
+    @include for-tablet {
+      border-radius: 10px;
+    }
+    .container-form_head {
+      padding-top: 10%;
+      padding-bottom: 20%;
+      position: relative;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      background-color: $white;
+    }
+    .container-form_body {
+      padding: 1rem;
+      background-color: $blueSky;
+      color: $blueSky;
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+      @include for-tablet {
+        padding: 1rem 2.4rem;
+        padding-bottom: 1.4rem;
+        height: auto;
+      }
+    }
+    .wavy {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      path {
+        stroke: $blueSky;
+      }
+    }
+  }
+  .back {
+    color: $white;
+    font-size: $fontSmall;
+    margin-top: 2rem;
+    display: block;
+  }
+}

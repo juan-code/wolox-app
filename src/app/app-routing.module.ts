@@ -1,10 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 
+import { AuthGuard, NoAuthGuard } from '@shared/guards';
+import { ROOT, SIGNINUP_ROUTES, POKEMON_ROUTES } from '@shared/constants';
+
 const routes: Routes = [
   {
-    path: '',
+    path: ROOT.main,
     loadChildren: () => import('@landing/landing.module').then(m => m.LandingModule),
+  },
+  {
+    path: SIGNINUP_ROUTES.main,
+    canLoad: [
+      NoAuthGuard,
+    ],
+    loadChildren: () => import('@sign/sign.module').then(m => m.SignModule)
   }
 ];
 

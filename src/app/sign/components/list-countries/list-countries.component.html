@@ -1,0 +1,22 @@
+<div class="container">
+  <input #search type="text" class="input input--block"
+    [value]="countryName"
+    (keyup)="searchCountry(search.value)"
+    (focus)="searchCountry(search.value)"
+    [placeholder]="'PLACEHOLDER.EXAMPLE' | translate:{ value:'Colombia' } | capitalize"
+  >
+  <div class="container-list-country" *ngIf="showList" #list>
+    <ul class="list-country">
+      <ng-container *ngIf="listCountry | filterList:filter:search.value as result">
+        <li 
+          *ngFor="let country of result; trackBy:trackByFn"
+          (click)="selectCountry(country)"
+          class="country-item">
+          <img class="flag" [src]="country.flag">
+          {{ country.name }}
+        </li>
+        <li *ngIf="result.length === 0">No se encontraro coincidencias</li>
+      </ng-container>
+    </ul>
+  </div>
+</div>

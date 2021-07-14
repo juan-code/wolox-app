@@ -1,0 +1,57 @@
+{
+  "SIGN": {
+    "PERSONAL_INFORMATION": "personal information",
+    "LOCATION": "location",
+    "ACCESS_INFORMATION": "access information",
+    "REGISTRATION": "registration",
+    "LOGIN": "login",
+    "LOADING": "logging in"
+  },
+  "SING_UP": {
+    "SING_UP": "sign up",
+    "LOADING": "logging",
+    "MESSAGES_ERROR_NAME": {
+      "REQUIRED": "name is required",
+      "MAX_LENGHT": "the name must have a maximum length of {{ value }}"
+    },
+    "MESSAGES_ERROR_LAST_NAME": {
+      "REQUIRED": "las name is required",
+      "MAX_LENGHT": "the last name must have a maximum length of {{ value }}"
+    },
+    "MESSAGES_ERROR_COUNTRY": {
+      "REQUIRED": "country is required"
+    },
+    "MESSAGES_ERROR_EMAIL": {
+      "REQUIRED": "email is required",
+      "PATTERN": "email is invalid"
+    },
+    "MESSAGES_ERROR_PHONE": {
+      "REQUIRED": "phone is required",
+      "PATTERN": "phone must be numeric",
+      "MAX": "phone must be {{ value }} characteres"
+    },
+    "MESSAGES_ERROR_PASSWORD": {
+      "REQUIRED": "password is required",
+      "MIN": "must have a minimum length of {{ value }}",
+      "PATTERN": "password must be alpha numeric"
+    },
+    "MESSAGES_ERROR_CONFIRMATION": {
+      "REQUIRED": "confirmation password is required",
+      "MATCH": "confirmation password no match"
+    }
+  },
+  "LABELS": {
+    "EMAIL": "email",
+    "PASSWORD": "password",
+    "CONFIRMATION": "confirmation",
+    "NAME": "name",
+    "LAST_NAME": "last name",
+    "PHONE": "phone number",
+    "COUNTRY": "country",
+    "PROVIDENCE": "providence",
+    "AUTOCOMPLETED": "autocompleted"
+  },
+  "PLACEHOLDER": {
+    "EXAMPLE": "example: {{ value }}"
+  }
+}

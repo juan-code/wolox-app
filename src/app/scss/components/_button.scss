@@ -5,12 +5,28 @@
   cursor: pointer;
   border-radius: 60px;
   padding: 0.4rem 1rem;
-  background: white;
+  background: $white;
   border: 2px solid transparent;
   min-width: 6rem;
+  transition: all 0.3s ease;
+  &:active {
+    background-color: lighten($blueSky, 30%);
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
   &.btn-outline--blue-sky {
     border-color: $blueSky;
     background-color: transparent;
+  }
+  &.btn-outline--white {
+    border-color: $white;
+    background-color: transparent;
+    color: $white;
+  }
+  &.btn--block {
+    width: 100%;
+    display: block;
   }
   &.btn-full--blue-sky {
     background-color: $blueSky;

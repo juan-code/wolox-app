@@ -17,9 +17,12 @@
     <li class="item">
       <app-select-language></app-select-language>
     </li>
+    <li *ngIf="isLogged" class="item" (click)="logout()">
+      log out
+    </li>
     <li>
-      <button type="button" class="btn btn-outline--blue-sky text--blue-sky text--sentence-case">
-        {{ 'MENU.SING_IN' | translate }}
+      <button type="button" [routerLink]="getRoute()" class="btn btn-outline--blue-sky text--blue-sky text--sentence-case">
+        {{ getTranslationKey() | translate }}
       </button>
     </li>
   </ul>

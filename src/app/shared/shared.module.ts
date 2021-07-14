@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 //internationalization i18n
 import { I18nModule } from '@app/i18n/i18n.module';
 
@@ -21,6 +22,8 @@ import {
   BrainComponent,
 } from './components/icons';
 
+import { FilterListPipe, CapitalizePipe } from './pipes';
+
 const components = [
   NavbarComponent,
   WoloxLogoComponent,
@@ -38,16 +41,24 @@ const components = [
   BrainComponent,
 ]
 
+const pipes = [
+  FilterListPipe,
+  CapitalizePipe,
+];
+
 @NgModule({
   declarations: [
     ...components,
+    ...pipes,
   ],
   exports: [
     ...components,
+    ...pipes
   ],
   imports: [
-    I18nModule.forChild(),
     CommonModule,
+    RouterModule,
+    I18nModule.forChild(),
   ],
 })
 export class SharedModule {}

@@ -1,0 +1,61 @@
+@import "../../../scss/abstract/variables";
+
+.container {
+  position: relative;
+  .container-list-country {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    top: calc(100% - 4px);
+    overflow: auto;
+    left: 0;
+    height: auto;
+    background: $white;
+    max-height: 10rem;
+    padding: 1rem 0;
+    border-radius: 6px;
+    z-index: 99;
+    border: 2px solid #d5cfcf;
+    border-top-color: #d5cfcfa4;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .list-country {
+    height: auto;
+    width: 100%;
+    overflow: auto;
+    padding: 0 1rem;
+    color: $blueSky;
+    background-color: $white;
+    user-select: none;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $blueSky;
+      border-radius: 10px;
+    }
+    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: darken($blueSky, 10%);
+    }
+    .country-item {
+      padding: 0.6rem 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      grid-gap: 6px;
+    }
+    .flag {
+      width: 20px;
+    }
+  }
+}

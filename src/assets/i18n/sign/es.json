@@ -1,0 +1,57 @@
+{
+  "SIGN": {
+    "PERSONAL_INFORMATION": "información personal",
+    "LOCATION": "locación",
+    "ACCESS_INFORMATION": "información de acceso",
+    "REGISTRATION": "registrarse",
+    "LOGIN": "iniciar sesión",
+    "LOADING": "iniciando"
+  },
+  "SING_UP": {
+    "LOADING": "registrando",
+    "MESSAGES_ERROR_NAME": {
+      "REQUIRED": "el nombre es requiredo",
+      "MAX_LENGHT": "el nombre de tener una longitud maxima de {{ value }}"
+    },
+    "MESSAGES_ERROR_LAST_NAME": {
+      "REQUIRED": "apellido es requerido",
+      "MAX_LENGHT": "el apellido debe tener una logintud maxima de {{ value }}"
+    },
+    "MESSAGES_ERROR_COUNTRY": {
+      "REQUIRED": "el país is requirido"
+    },
+    "MESSAGES_ERROR_EMAIL": {
+      "REQUIRED": "el email es requerido",
+      "PATTERN": "el email no es valido"
+    },
+    "MESSAGES_ERROR_PHONE": {
+      "REQUIRED": "el telefono es requerido",
+      "PATTERN": "el telefono solo debe ser numerico",
+      "MAX": "el telefono solo debe ser maximo de {{ value }} caracteres"
+    },
+    "MESSAGES_ERROR_PASSWORD": {
+      "REQUIRED": "la contraseña es requerida",
+      "MIN": "la contraseña debe ser minimo {{ value }} caracteres",
+      "PATTERN": "la contraseña debe ser alfanumerica"
+    },
+    "MESSAGES_ERROR_CONFIRMATION": {
+      "REQUIRED": "las confirmación es requerida",
+      "MATCH": "las contraseñas no coinciden"
+    }
+  },
+  "LABELS": {
+    "EMAIL": "correo electronico",
+    "PASSWORD": "contraseña",
+    "CONFIRMATION": "confirmación",
+    "NAME": "nombre",
+    "LAST_NAME": "apellido",
+    "PHONE": "telefono",
+    "COUNTRY": "país",
+    "PROVIDENCE": "providencia",
+    "AUTOCOMPLETED": "autocompletado"
+  },
+  "PLACEHOLDER": {
+    "EXAMPLE": "ejemplo: {{ value }}"
+  },
+  "LOADING": "loading"
+}

@@ -1,0 +1,31 @@
+<form [formGroup]="formSignin" autocomplete="off" (ngSubmit)="onSubmit(formSignin)">
+  <div class="form-signup">
+    <div class="form-group">
+      <div class="group">
+        <div class="container-input all-columns" [class.error]="showError('email')">
+          <label>
+            {{ 'LABELS.EMAIL' | translate | capitalize }}
+          </label>
+          <input type="email" class="input input--block" formControlName="email" [placeholder]="'PLACEHOLDER.EXAMPLE' | translate:getValue('jhon@doe.com') | capitalize" />
+          <small *ngIf="showError('email')" class="text--sentence-case input-error">{{ getMessage('email') | translate | capitalize }}</small>
+        </div>
+        <div class="container-input all-columns" [class.error]="showError('password')">
+          <label>
+            {{ 'LABELS.PASSWORD' | translate | capitalize }}
+          </label>
+          <input type="password" class="input input--block" formControlName="password" placeholder="*******" />
+          <small *ngIf="showError('password')" class="text--sentence-case input-error">{{ getMessage('password') | translate | capitalize }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn--block" [disabled]="formSignin.invalid || isLoggin">
+    <ng-container *ngIf="isLoggin; else noLoading">
+      {{ 'LOADING' | translate | capitalize }}
+    </ng-container>
+    <ng-template #noLoading>
+      {{ 'SIGN.LOGIN' | translate | capitalize }}
+    </ng-template>
+  </button>
+</form>
+
