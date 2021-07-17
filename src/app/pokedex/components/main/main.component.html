@@ -1,0 +1,26 @@
+<app-search></app-search>
+<div class="container-header">
+  <div class="controls">
+    <ng-container *ngIf="!pokemonSearched">
+      <app-pagination></app-pagination>
+      <select #pagination (change)="changeSize(pagination.value)">
+        <option [value]="size" *ngFor="let size of itemsPagination">
+          {{ size }}
+        </option>
+      </select>
+    </ng-container>
+  </div>
+  <app-pokemon-selected></app-pokemon-selected>
+</div>
+<button type="button" (click)="cleanFilter()" class="btn btn-pokemon" *ngIf="pokemonSearched">
+  cancelar
+</button>
+<app-list-pokemon 
+  (selected)="cleanFilter()"
+  [pokemons]="getListPokemons">
+</app-list-pokemon>
+<ng-container *ngIf="!pokemonSearched">
+  <div class="text--center">
+    <app-pagination></app-pagination>
+  </div>
+</ng-container>

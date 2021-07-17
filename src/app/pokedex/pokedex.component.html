@@ -1,0 +1,10 @@
+<div class="container">
+  <img [lazy-src]="logoUrl" class="logo" />
+  <div class="text--center">
+    <a [routerLink]="['/']" class="text--white text--sentence-case">regresar</a>
+  </div>
+  <router-outlet></router-outlet>
+  <div *ngIf="isLoadingPokemon" class="loader">
+    <app-pokeball size="40vw" [animated]="true"></app-pokeball>
+  </div>
+</div>

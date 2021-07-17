@@ -7,8 +7,8 @@
     "LOGIN": "login",
     "LOADING": "logging in"
   },
-  "SING_UP": {
-    "SING_UP": "sign up",
+  "SIGN_UP": {
+    "SIGN_UP": "sign up",
     "LOADING": "logging",
     "MESSAGES_ERROR_NAME": {
       "REQUIRED": "name is required",
@@ -49,7 +49,8 @@
     "PHONE": "phone number",
     "COUNTRY": "country",
     "PROVIDENCE": "providence",
-    "AUTOCOMPLETED": "autocompleted"
+    "AUTOCOMPLETED": "autocompleted",
+    "ACCEPT": "accept terms and conditions"
   },
   "PLACEHOLDER": {
     "EXAMPLE": "example: {{ value }}"

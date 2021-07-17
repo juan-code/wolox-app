@@ -12,7 +12,7 @@ export class NoAuthGuard implements CanLoad {
   constructor(
     private readonly router: Router,
     private readonly storageService: StorageService
-  ) {}
+  ) { }
 
   canLoad(): boolean {
     const isLogged = this.storageService.userIsLogged();

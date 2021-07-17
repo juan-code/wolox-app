@@ -1,5 +1,5 @@
 <picture class="picture">
   <source [media]="DESKTOP_SIZE" [srcset]="IMAGE3X">
   <source [media]="TABLE_SIZE" [srcset]="IMAGE2X">
-  <img [src]="IMAGE" class="img-picture" [alt]="alt">
+  <img [lazy-src]="IMAGE" class="img-picture" [alt]="alt">
 </picture>

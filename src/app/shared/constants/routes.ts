@@ -3,6 +3,9 @@ export const ROOT = {
 }
 export const POKEMON_ROUTES = {
   main: 'pokedex',
+  childrend: {
+    compare:'compare-pokemons'
+  }
 }
 export const SIGNINUP_ROUTES = {
   main: 'sign'

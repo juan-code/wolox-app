@@ -4,7 +4,7 @@ import { finalize } from 'rxjs/operators';
 
 import { CapitalizePipe } from '@shared/pipes';
 
-import { EMAIL_REGEXP } from '@shared/constants';
+import { EMAIL_REGEXP, POKEMON_ROUTES } from '@shared/constants';
 import { getMessage } from '@sign/messages';
 import { SessionService } from '@app/sign/services';
 import { Router } from '@angular/router';
@@ -44,7 +44,7 @@ export class SignInComponent implements OnInit {
       this.isLoggin = true;
       this.sessionService.signIn(form.value).subscribe(() => {
         this.isLoggin = false;
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl(`/${POKEMON_ROUTES.main}`);
       })
     }
   }

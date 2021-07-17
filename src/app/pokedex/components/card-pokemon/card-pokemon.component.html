@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="header text--center">
+    <h2 class="text--white text--sentence-case font-size-big">
+      {{ name }}
+      <br />
+      #{{ id }}
+    </h2>
+    <div class="spacer"></div>
+  </div>
+  <div class="body text--left font-bold font-size-medium">
+    <div class="sprite">
+      <img [lazy-src]="sprite" />
+    </div>
+    <p class="pokemon-information text--sentence-case">
+      altura: {{ height }}
+    </p>
+    <p class="pokemon-information text--sentence-case">
+      peso: {{ weight }}
+    </p>
+    <div class="pokemon-list">
+      <p class="pokemon-information text--sentence-case">tipos</p>
+      <span class="pokemon-type text--sentence-case" *ngFor="let type of types">
+        {{ type }}
+      </span>
+    </div>
+    <div class="pokemon-list">
+      <p class="pokemon-information text--sentence-case">habilidades</p>
+      <span class="pokemon-type text--sentence-case" *ngFor="let ability of abilities">
+        {{ ability }}
+      </span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+.container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 20rem;
+  border-radius: 6px;
+  overflow: hidden;
+  .header {
+    background-color: #a4a4a4;
+    padding: 2rem;
+    padding-bottom: 70px;
+    position:relative;
+    z-index: 1;
+    .spacer {
+      background-color: white;
+      position: absolute;
+      width: calc(80% - 104px);
+      padding-top: 51px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      z-index: 1;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        background: transparent url('https://assets.pokemon.com/static2/_ui/img/chrome/notches/notch-white-xxl.png') no-repeat 0 0;
+        height: 52px;
+        width: 75px;
+        bottom: 0;
+        z-index: -1;
+      }
+      &::before {
+        background-position: right top;
+        right: -72px;
+      }
+      &::after {
+        left: -72px;
+      }
+    }
+  }
+  .body {
+    position: relative;
+    background: white;
+    padding: 1rem;
+    width: 100%;
+    margin: auto;
+    img {
+      width: 100%;
+    }
+    .pokemon-list {
+      padding: 1rem 0;
+    }
+    .pokemon-type {
+      border-radius: 5px;
+      margin: 0 0.2rem 0.2rem 0;
+      display: inline-block;
+      padding: 0.6rem;
+      background: #32a7d7;
+      color: white;
+    }
+  }
+}

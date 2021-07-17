@@ -1,0 +1,11 @@
+.container {
+  display: inline-block;
+  padding: 1rem 0;
+  .controls {
+    padding: inherit;
+  }
+  .btn-arrow {
+    background-color: black;
+    border-color: black;
+  }
+}

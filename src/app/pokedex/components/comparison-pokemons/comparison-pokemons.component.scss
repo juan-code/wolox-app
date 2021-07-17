@@ -1,0 +1,13 @@
+@import "../../../scss/abstract/mixins";
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* see notes below */
+  grid-gap: 1em;
+  grid-gap: 2rem;
+  @include for-tablet {
+    padding: 2rem;
+  }
+}

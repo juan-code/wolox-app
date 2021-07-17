@@ -62,6 +62,7 @@ export class SignUpComponent implements OnInit {
         Validators.pattern(ALPHA_NUMERIC_REGEXP)
       ])),
       confirmation: this.formbuilder.control('', Validators.required),
+      accept: this.formbuilder.control(false, Validators.requiredTrue)
     }, {
       validator: mustMatch('password', 'confirmation')
     })

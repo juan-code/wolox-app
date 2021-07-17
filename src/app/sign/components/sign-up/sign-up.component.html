@@ -72,13 +72,22 @@
         </div>
       </div>
     </div>
+    <div class="form-group">
+      <div class="container-input" [class.error]="showError('accept')">
+        <label checkbox>
+          <input type="checkbox" class="input input--checkbox" formControlName="accept" />
+          {{ 'LABELS.ACCEPT' | translate | capitalize }}
+        </label>
+        <small *ngIf="showError('accept')" class="text--sentence-case">{{ getMessage('accept') | translate | capitalize }}</small>
+      </div>
+    </div>
   </div>
   <button type="submit" class="btn btn--block" [disabled]="formSignup.invalid || isLogginIn">
     <ng-container *ngIf="isLogginIn; else noLoading">
       {{ 'LOADING' | translate | capitalize }}
     </ng-container>
     <ng-template #noLoading>
-      {{ 'SING_UP.LOGIN' | translate | capitalize }}
+      {{ 'SIGN_UP.SIGN_UP' | translate | capitalize }}
     </ng-template>
   </button>
 </form>

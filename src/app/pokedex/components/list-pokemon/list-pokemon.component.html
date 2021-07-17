@@ -1,0 +1,15 @@
+<div class="container-list-pokemon">
+  <ul class="list-pokemon mode-grid" [class.mode-flex]="isAtivated" [class.mode-grid]="!isAtivated">
+    <li *ngFor="let pokemon of list; index as i" class="item-pokemon text--center" [class.isCompleted]="!pokemon.selected && isCompletedSelection" [class.selected]="pokemon.selected">
+      <div (click)="selected(i)" class="content-item">
+        <img [lazy-src]="pokemon.sprite" class="sprite" />
+        <p class="name font-size-medium">{{ pokemon.name | capitalize }}</p>
+        <br />
+        <p class="name font-size-small">
+          {{ id(pokemon.id) }}
+        </p>
+      </div>
+      <br />
+    </li>
+  </ul>
+</div>

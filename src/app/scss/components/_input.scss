@@ -11,7 +11,7 @@
       border-color: $danger;
     }
   }
-  label {
+  label:not([checkbox]) {
     font-size: $fontSmall;
     padding: 0.2rem 0.4rem;
     position: relative;

@@ -5,7 +5,7 @@ import { ROOT } from '@shared/constants';
 import { StorageService } from '@shared/services';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthGuard implements CanLoad {
   

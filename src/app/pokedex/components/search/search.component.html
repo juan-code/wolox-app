@@ -1,0 +1,12 @@
+<form [formGroup]="formSearch" (ngSubmit)="onSubmit(formSearch)" class="form-search">
+  <div class="container-form">
+    <input type="text" class="input-search" formControlName="search">
+    <button type="submit" class="btn text--sentence-case" [disabled]="formSearch.invalid || sarching">
+      buscar
+    </button>
+  </div>
+  <div class="text--left" *ngIf="hasError">
+    <br />
+    <h2 class="text--white text--sentence-case">no se encontro el pokemon</h2>
+  </div>
+</form>

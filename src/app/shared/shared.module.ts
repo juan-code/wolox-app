@@ -23,6 +23,7 @@ import {
 } from './components/icons';
 
 import { FilterListPipe, CapitalizePipe } from './pipes';
+import { LazyLoadImgDirective } from './directives';
 
 const components = [
   NavbarComponent,
@@ -46,14 +47,20 @@ const pipes = [
   CapitalizePipe,
 ];
 
+const directives = [
+  LazyLoadImgDirective,
+]
+
 @NgModule({
   declarations: [
     ...components,
     ...pipes,
+    ...directives,
   ],
   exports: [
     ...components,
-    ...pipes
+    ...pipes,
+    ...directives,
   ],
   imports: [
     CommonModule,

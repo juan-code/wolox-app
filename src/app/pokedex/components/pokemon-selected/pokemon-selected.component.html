@@ -1,0 +1,23 @@
+<ul class="list-pokemons">
+  <li *ngIf="listPokemons.length === 0" class="pokemon-item text--center">
+    <div class="container-pokeball">
+      <app-pokeball size="100px"></app-pokeball>
+    </div>
+    <span class="font-size--medium">No hay pokemos seleccionados</span>
+  </li>
+  <li *ngFor="let pokemon of listPokemons" class="pokemon-item text--center">
+    <div class="container-pokeball">
+      <button type="button" class="btn-close" (click)="removePokemon(pokemon)">X</button>
+      <app-pokeball size="100px"></app-pokeball>
+    </div>
+    <div class="container-item">
+      <img [lazy-src]="pokemon.sprite">
+    </div>
+    <span class="font-size--medium">{{ pokemon.name | capitalize }}</span>
+  </li>
+</ul>
+<div class="text--center">
+  <button class="btn btn-compare btn-pokemon text--sentence-case" routerLink="compare-pokemons" [disabled]="listPokemons.length === 0">
+    comparar
+  </button>
+</div>

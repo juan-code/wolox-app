@@ -1,0 +1,12 @@
+<div class="container text--center">
+  <app-pokeball size="100px"></app-pokeball>
+  <div class="controls">
+    <button type="button" class="btn btn-pokemon" [disabled]="canPrev" (click)="prev()">
+      prev
+    </button>
+    
+    <button type="button" class="btn btn-pokemon" [disabled]="canNext" (click)="next()">
+      next
+    </button>
+  </div>
+</div>

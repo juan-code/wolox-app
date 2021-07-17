@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { I18nModule } from '@app/i18n/i18n.module';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

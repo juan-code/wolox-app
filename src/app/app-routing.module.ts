@@ -15,6 +15,13 @@ const routes: Routes = [
       NoAuthGuard,
     ],
     loadChildren: () => import('@sign/sign.module').then(m => m.SignModule)
+  },
+  {
+    path: POKEMON_ROUTES.main,
+    canLoad: [
+      AuthGuard
+    ],
+    loadChildren: () => import('@pokedex/pokedex.module').then(m => m.PokedexModule)
   }
 ];
 

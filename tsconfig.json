@@ -8,7 +8,8 @@
       "@env/*": ["src/environments/*"],
       "@shared/*": ["src/app/shared/*", "src/app/shared/index"],
       "@landing/*": ["src/app/landing/*"],
-      "@sign/*": ["src/app/sign/*"]
+      "@sign/*": ["src/app/sign/*"],
+      "@pokedex/*": ["src/app/pokedex/*"]
     },
     "outDir": "./dist/wolox",
     "forceConsistentCasingInFileNames": true,

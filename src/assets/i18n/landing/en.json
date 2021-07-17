@@ -1,7 +1,7 @@
 {
   "HERO": {
     "WELCOME": "welcome to your",
-    "INTERVIEW": "technic interview",
+    "INTERVIEW": "technical interview",
     "IN": "in"
   },
   "BENEFITS": {
@@ -11,13 +11,13 @@
     "SNACKS": "free snacks, fruits and drinks",
     "REMOTE_WEEK": "remote week",
     "CURRENTLY": "working on the latest technologies",
-    "OUR_BENEFITS": "Among the benefits we offer are"
+    "OUR_BENEFITS": "the benefits we offer include"
   },
   "WOLOXERS": {
     "FOLLOW_US": "follow us",
     "WORK_TO": "work to",
-    "CONVERT": "convert",
-    "IDEAS": "ideas",
+    "CONVERT": "turn",
+    "IDEAS": "ideas into",
     "PRODUCTS": "products"
   }
 }

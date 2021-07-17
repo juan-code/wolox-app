@@ -1,6 +1,6 @@
 {
   "MENU": {
-    "SING_UP": "sign up",
+    "SIGN_UP": "sign up",
     "SING_IN": "sign in",
     "HOME": "home",
     "BENEFITS": "benefits",
@@ -10,6 +10,6 @@
     "THANK_YOU_BY": "thank you for",
     "COMPLETED_EXERCISE": "complete this exercise",
     "INVITATION": "we invite you to show more information",
-    "KNOW_MORE": "you know more"
+    "KNOW_MORE": "learn more"
   }
 }

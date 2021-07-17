@@ -1,6 +1,6 @@
 import { AbstractControl } from "@angular/forms";
 
-const ROOT:string = 'SING_UP';
+const ROOT:string = 'SIGN_UP';
 const PATH_TRANSLATE:any = {
   name: {
     path: 'MESSAGES_ERROR_NAME',

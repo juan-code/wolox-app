@@ -1,0 +1,48 @@
+@import "../../../scss/abstract/mixins";
+
+.list-pokemons {
+  display: block;
+  @include for-tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.pokemon-item {
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+  width: auto;
+  height: auto;
+  color: white;
+  font-weight: bold;
+  &::ng-deep app-pokeball {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+  }
+  .container-pokeball {
+    position: inherit;
+  }
+  .container-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -60%) scale(1);
+    img {
+      width: 70%;
+    }
+  }
+  .btn-close {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    z-index: 11;
+    border-radius: 50%;
+    border: none;
+    top: 0;
+    right: 0;
+    transform: translate(20%, -20%);
+  }
+}

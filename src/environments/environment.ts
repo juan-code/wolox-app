@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   apiCountry: 'https://restcountries.eu/rest',
-  apiAuth: 'http://private-8e8921-woloxfrontendinverview.apiary-mock.com',
+  apiAuth: 'https://private-8e8921-woloxfrontendinverview.apiary-mock.com',
+  apiPokemon: 'https://pokeapi.co/api'
 };
 
 /*
